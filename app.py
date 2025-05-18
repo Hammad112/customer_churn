@@ -77,7 +77,7 @@ if submitted:
     input_scaled = scalar.transform(input_full)
 
     prediction = model.predict(input_scaled)[0][0]
-    result = "🔥 Likely to Churn" if prediction >= 0.5 else "✅ Likely to Stay"
+    result = "🔥 Likely to Exit" if prediction >= 0.5 else "✅ Likely to Stay"
     confidence = prediction if prediction >= 0.5 else 1 - prediction
 
     # --- Output Results ---
